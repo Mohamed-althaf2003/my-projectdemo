@@ -1,0 +1,412 @@
+.hero {
+  background: 
+    /* Dark overlay to make text readable */
+    /* Your background image */
+    url('../assets/backgroundimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 48px 24px;
+  margin-bottom: 32px;
+  color: white; /* Change text color to white for better contrast */
+  position: relative;
+}
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1A1A1A;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 0 auto 48px;
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 178, 7, 0.1);
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.search-icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 18px 0;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-button {
+  background: #2C966A;
+  color: white;
+  border: none;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background: #009606;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  /*max-width: 1000px;*/
+  margin: 0 auto;
+}
+
+/* Updated Feature Card Styles to match image layout */
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  text-align: left;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 178, 7, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.feature-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-content {
+  flex: 1;
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+  margin-bottom: 8px;
+}
+
+.feature-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.feature-button {
+  background: #2C966A;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.feature-button:hover {
+  background: #2C966A;
+}
+
+/* Responsive Hero */
+@media (max-width: 992px) {
+  .hero {
+    padding: 40px 20px;
+  }
+  
+  .hero-title {
+    font-size: 40px;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 32px 16px;
+  }
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  
+  .search-box {
+    padding: 0 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .search-input {
+    padding: 16px 0;
+  }
+  
+  .search-button {
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .feature-card {
+    padding: 24px 20px;
+  }
+  
+  .feature-header {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 24px 12px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  
+  .feature-icon-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .feature-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Updated Feature Card Styles to match image layout with background images */
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.90;
+  z-index: 0;
+}
+
+.feature-header,
+.feature-content,
+.feature-description,
+.feature-button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Express Delivery Card - using your exp.png */
+.feature-card:nth-child(1)::before {
+  background-image: url('../assets/exp.jpg'); /* Path from your CSS file */
+}
+
+/* Cash On Delivery Card - you might need to add cash.png */
+.feature-card:nth-child(2)::before {
+  background-image: url('../assets/cash.jpg'); /* You'll need to add this image */
+}
+
+/* Gift Voucher Card - you might need to add gift.png */
+.feature-card:nth-child(3)::before {
+  background-image: url('../assets/gift.jpg'); /* You'll need to add this image */
+}
+
+/* Alternative: Add specific classes to your cards in JSX */
+.express-card::before {
+  background-image: url('../assets/exp.jpg');
+}
+
+.cash-card::before {
+  background-image: url('../assets/cash.jpg');
+}
+
+.gift-card::before {
+  background-image: url('../assets/gift.jpg');
+}
+
+/* Fallback background colors in case images don't load */
+.feature-card:nth-child(1) {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FFF8 100%);
+}
+
+.feature-card:nth-child(2) {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBF0 100%);
+}
+
+.feature-card:nth-child(3) {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF0F2 100%);
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.feature-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 178, 7, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.feature-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-content {
+  flex: 1;
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.feature-description {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.feature-button {
+  background: #2C966A;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.feature-button:hover {
+  background: #009606;
+}
